@@ -1,0 +1,435 @@
+html,
+body {
+  font-size: 16px; /* 1 rem */
+  font-weight: normal;
+  font-family: sans-serif;
+  line-height: 2;
+  margin-top: 0;
+}
+
+p {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  color: grey;
+}
+
+h1 {
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 900;
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: 'Libre Franklin', serif;
+  font-weight: 900;
+  font-size: 2.25rem;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-family: 'Libre Franklin', serif;
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+
+li,
+a {
+  color: black;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
+
+section {
+  display: block;
+}
+
+p.caption {
+  font-size: .75rem;
+  font-style: italic;
+}
+
+/* Header */
+
+header {
+  height: 8rem;
+  display: block;
+  margin: 3rem;
+}
+
+/* Desktop and Tablet */
+
+.site-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+nav.menu-desktop {
+  display: flex;
+  justify-content: center;
+}
+
+nav.menu-desktop li{
+  margin: 0 auto;
+  display: inline;
+  align-items: center;
+  justify-content: space-between;
+  transition: #f00000 1s linear;
+  padding: 0rem .75rem;
+  text-transform: uppercase;
+  letter-spacing: .125rem;
+  transition: underline 1s linear;
+}
+
+nav.menu-desktop a:hover {
+  color: #f00000;
+  text-decoration: underline;
+}
+
+
+/* Mobile */
+nav.menu-mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .menu-desktop {
+    display: none;
+  }
+
+  .title {
+    display: none;
+  }
+
+  nav.menu-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 1.5rem;
+  }
+
+  nav.menu-mobile .icon {
+    align-items: center;
+  }
+}
+
+/* HELLO STYLES HERE */
+
+
+.intro {
+  display: flex;
+  justify-content: center;
+  margin: 10rem 0;
+}
+
+.hello-block {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hello-block p {
+  margin-bottom: 1rem;
+}
+
+.hello-block h1 {
+  line-height: 6rem;
+}
+
+.hello-block h1:hover {
+  color: #404040;
+  transition: #404040 1s linear;
+}
+
+
+/* INDEX PORTFOLIO STYLES HERE */
+
+section.portfolio {
+  margin: 20rem 0;
+}
+
+.portfolio-container { /* Site Content Width if needed */
+  max-width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+}
+
+.portfolio-entry img {
+  display: block;
+  padding: 1rem;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Hover 1 */
+
+.portfolio-entry img {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.portfolio-entry:hover img {
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+figure {
+	max-width: 100%;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	background: #fff;
+	overflow: hidden;
+}
+figure:hover+span {
+	bottom: -36px;
+	opacity: 1;
+}
+
+.portfolio-entry span {
+	position: absolute;
+	bottom: -20px;
+	left: 0;
+	z-index: -1;
+	display: block;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	color: #444;
+	font-size: 18px;
+	text-decoration: none;
+	text-align: center;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+	opacity: 0;
+}
+
+
+
+/* Hover 2
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.portfolio-entry:hover .overlay {
+  height: 100%;
+}
+
+.text {
+  white-space: nowrap;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+*/
+
+
+/* ABOUT STYLES HERE */
+
+
+section.about-module {
+  display: block;
+  margin: 10rem;
+}
+
+.profile{
+  width: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.headshot {
+  z-index: 5;
+  position: relative;
+  width: 50%;
+}
+
+.headshot img {
+  max-width: 100%;
+  height: auto;
+}
+
+.bio {
+  position: absolute;
+  z-index: 10;
+  right: 5rem;
+  height: auto;
+  width: 50%;
+}
+
+
+.bio-content {
+  padding: 3.125rem;
+  background-color: rgba(229, 229, 229, 0.95);
+}
+
+
+.bio-content h2 {
+  line-height: 2.5rem;
+}
+
+.bio-content p {
+  margin-top: 1rem;
+  font-size: 14px;
+}
+
+
+/* CONTACT STYLES HERE */
+
+section.contact {
+  display: block;
+  margin: 10rem 10rem 20rem 10rem;
+}
+
+.contact-info {
+  width: 60%;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+
+.contact-email {
+  display: inline;
+}
+
+.contact-location {
+  display: inline;
+}
+
+
+
+/* RESUME STYLES HERE */
+
+section.resume {
+  display: block;
+  margin: 10rem 10rem 20rem 10rem;
+}
+
+.resume-text {
+  max-width: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+.resume-section {
+  margin: 5rem 0;
+}
+
+.resume-section h2 {
+  text-align: center;
+}
+
+.resume-entry {
+  margin: 2rem 0;
+}
+
+
+/* CLIENT WORK STYLES HERE */
+
+section.client-work {
+  display: block;
+  margin: 10rem 10rem 20rem 10rem;
+}
+
+.client-description {
+  display: block;
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+.client-portfolio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.client-portfolio-entry {
+  display: inline;
+  width: 80%;
+  margin: 5rem 0;
+}
+
+video.client-entry {
+  max-width: 100%;
+}
+
+.client-portfolio-entry p.caption {
+  text-align: center;
+}
+
+
+
+
+/* Footer */
+
+footer {
+  background-color: #e5e5e5;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+}
+
+footer .legal {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 3rem 2rem;
+}
+
+footer a {
+  font-size: .875rem;
+  color: grey;
+  transition: underline 1s linear;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer .links a:nth-child(2n) {
+  padding-left: .5rem;
+}
+
+/* Footer Mobile */
+@media only screen and (max-width: 768px) {
+
+  footer .legal p {
+    margin: 1rem 1.5rem;
+    display: inline-flex;
+  }
+
+  footer .links {
+    display: none;
+  }
+}

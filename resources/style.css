@@ -1,0 +1,291 @@
+html,
+body {
+  font-size: 16px; /* 1 rem */
+  font-weight: normal;
+  font-family: sans-serif;
+  line-height: 2;
+  margin-top: 0;
+}
+
+p {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  color: grey;
+}
+
+h1 {
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 900;
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: 'Libre Franklin', serif;
+  font-weight: 900;
+  font-size: 2.25rem;
+  text-transform: uppercase;
+}
+
+li,
+a {
+  color: black;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
+
+section {
+  display: block;
+}
+
+/* Header */
+
+header {
+  height: 8rem;
+  display: block;
+  margin: 3rem;
+}
+
+/* Desktop and Tablet */
+
+.site-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+nav.menu-desktop {
+  display: flex;
+  justify-content: center;
+}
+
+nav.menu-desktop li{
+  margin: 0 auto;
+  display: inline;
+  align-items: center;
+  justify-content: space-between;
+  list-style: underline;
+  text-decoration: underline;
+  transition: #e64e60 1s linear;
+  padding: 0rem .75rem;
+}
+
+nav.menu-desktop a:hover {
+  color: #e64e60;
+}
+
+/* Mobile */
+nav.menu-mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .menu-desktop {
+    display: none;
+  }
+
+  .title {
+    display: none;
+  }
+
+  nav.menu-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 1.5rem;
+  }
+
+  nav.menu-mobile .icon {
+    align-items: center;
+  }
+}
+
+/* Hello */
+.intro {
+  display: flex;
+  justify-content: center;
+  margin: 20rem 0;
+}
+
+.hello-block {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hello-block p {
+  margin-bottom: 1rem;
+}
+
+
+/* About */
+.about-module {
+  display: flex;
+  margin-top: 20rem;
+  padding: 0rem 20rem;
+}
+
+.bio-wrapper {
+  width: 75%;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.bio-card {
+  position: absolute;
+  padding: 3.125rem;
+  background-color: #e5e5e5;
+  opacity: .95;
+  z-index: 10;
+  width: 20rem;
+  height: auto;
+  margin-top: 12rem;
+  margin-left: 32rem;
+  overflow: hidden;
+}
+
+
+.bio-card h2 {
+  line-height: 2.5rem;
+}
+
+.bio-card p {
+  margin-top: 1rem;
+  color: #404040;
+  font-size: 14px;
+}
+
+.headshot {
+  position: absolute;
+  margin: auto;
+  z-index: 5;
+}
+
+.headshot img {
+  width: 100%;
+  height: auto;
+}
+
+
+/* Interests*/
+.icons {
+  display: flex;
+  justify-content: center;
+  margin: 20rem;
+}
+
+.icons img.icon {
+  display: flex;
+  max-width: 25%;
+  height: auto;
+}
+
+
+
+
+
+/* Hello Mobile */
+@media only screen and (max-width: 768px) {
+
+  .banner img.hero {
+    width: 100%;
+    min-height: 11.25rem;
+    margin: 0 auto;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .feature-block {
+    margin: 2rem 1rem;
+  }
+
+  .feature-block h1 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .feature-block p {
+    display: block;
+  }
+
+  .feature-block .button {
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+}
+
+
+
+
+/* Portfolio */
+
+section.portfolio {
+  margin: 20rem 0;
+}
+
+.portfolio-container { /* Site Content Width if needed */
+  max-width: 60%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.grid-desktop {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.grid-desktop img {
+  padding: 1rem;
+  max-width: 100%;
+  height: auto;
+
+}
+
+
+/* Footer */
+
+footer {
+  background-color: #ededed;
+}
+
+footer .legal {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 3rem 2rem;
+}
+
+footer a {
+  font-size: .875rem;
+  color: grey;
+  transition: underline 1s linear;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer .links a:nth-child(2n) {
+  padding-left: .5rem;
+}
+
+/* Footer Mobile */
+@media only screen and (max-width: 768px) {
+
+  footer .legal p {
+    margin: 1rem 1.5rem;
+    display: inline-flex;
+  }
+
+  footer .links {
+    display: none;
+  }
+}
