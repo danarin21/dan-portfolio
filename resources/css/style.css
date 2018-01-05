@@ -12,6 +12,7 @@ p {
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   color: grey;
+  margin-bottom: 2rem;
 }
 
 h1 {
@@ -26,6 +27,7 @@ h2 {
   font-weight: 900;
   font-size: 2.25rem;
   text-transform: uppercase;
+  line-height: 2.5rem;
 }
 
 h3 {
@@ -46,17 +48,16 @@ section {
   display: block;
 }
 
-p.caption {
-  font-size: .75rem;
-  font-style: italic;
-}
-
 /* Header */
 
 header {
   height: 8rem;
   display: block;
   margin: 3rem;
+}
+
+p.caption {
+  margin-top: 1rem;
 }
 
 /* Desktop and Tablet */
@@ -257,7 +258,7 @@ section.about-module {
   margin: 10rem;
 }
 
-.profile{
+.profile {
   width: 100%;
   display: flex;
   position: relative;
@@ -288,11 +289,6 @@ section.about-module {
 .bio-content {
   padding: 3.125rem;
   background-color: rgba(229, 229, 229, 0.95);
-}
-
-
-.bio-content h2 {
-  line-height: 2.5rem;
 }
 
 .bio-content p {
@@ -363,33 +359,68 @@ section.client-work {
 
 .client-description {
   display: block;
-  max-width: 50%;
+  width: 50%;
   margin: 0 auto;
 }
 
 .client-portfolio {
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.client-portfolio-entry {
-  display: inline;
+.client-description h2 {
+  margin-bottom: 1rem;
+}
+
+.client-portfolio-entry-twocol {
+  display: inline-flex;
   width: 80%;
   margin: 5rem 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.client-portfolio-entry-onecol {
+  display: inline-flex;
+  width: 70%;
+  margin: 3rem 0;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 video.client-entry {
+  width: 100%;
+  display: inline;
+  position: relative;
+  margin: 2rem 0;
+}
+
+img.client-entry {
   max-width: 100%;
+  display: inline;
+  margin: 3rem 0;
+  border: 1px solid lightgrey;
+
 }
 
-.client-portfolio-entry p.caption {
-  text-align: center;
+.client-portfolio-entry-split-text {
+  display: inline-block;
+  width: 40%;
 }
 
+.client-portfolio-entry-head-text {
+  display: block;
+  width: 70%;
+  margin: 2rem 0;
+}
 
-
+.client-description a {
+  text-decoration: underline;
+}
 
 /* Footer */
 
@@ -404,7 +435,7 @@ footer .legal {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 3rem 2rem;
+  padding: 3rem 5rem;
 }
 
 footer a {
