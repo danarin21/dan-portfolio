@@ -58,6 +58,8 @@ header {
 
 p.caption {
   margin-top: 1rem;
+  font-style: italic;
+  font-size: .75rem;
 }
 
 /* Desktop and Tablet */
