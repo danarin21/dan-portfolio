@@ -12,7 +12,6 @@ p {
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   color: grey;
-  margin-bottom: 2rem;
 }
 
 h1 {
@@ -249,7 +248,7 @@ section.contact {
   position: relative;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: 0 auto;
 }
 
@@ -262,9 +261,13 @@ section.contact {
 }
 
 .site-about {
-  max-width: 50%;
+  max-width: 60%;
   display: block;
   margin: 0 auto;
+}
+
+.site-about p {
+  margin-top: 2rem;
 }
 
 
@@ -277,21 +280,22 @@ section.resume {
 }
 
 .resume-text {
-  max-width: 50%;
+  max-width: 70%;
   display: block;
   margin: 0 auto;
 }
 
 .resume-section {
-  margin: 5rem 0;
+  margin: 8rem 0;
 }
 
 .resume-section h2 {
   text-align: center;
+  margin: 2rem;
 }
 
 .resume-entry {
-  margin: 2rem 0;
+  margin-bottom: 4rem;
 }
 
 
@@ -330,7 +334,7 @@ section.client-work {
 
 .client-portfolio-entry-onecol {
   display: inline-flex;
-  width: 70%;
+  width: 90%;
   margin: 3rem 0;
   justify-content: center;
   align-items: center;
@@ -403,20 +407,81 @@ footer .links a:nth-child(2n) {
 
 /* Footer Mobile */
 @media only screen and (max-width: 768px) {
-
-  footer .legal p {
-    margin: 1rem 1.5rem;
-    display: inline-flex;
+  footer .legal {
+    display: inline;
+    justify-content: flex-start;
   }
 
   footer .links {
-    display: none;
+    margin: 1rem 5rem;
   }
+
+  footer p {
+    margin: 1rem 5rem;
+  }
+
 }
 
 
 
 /* MOBILE QUERIES HERE */
+
+@media only screen and (max-width: 1100px) {
+  section.contact {
+    display: block;
+    margin: 10rem;
+  }
+
+  .profile {
+    width: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .headshot {
+    width: 80%;
+    height: auto;
+    z-index: 5;
+  }
+
+  .bio {
+    width: 80%;
+    height: auto;
+    position: relative;
+    right: 0;
+    margin-top: 2rem;
+  }
+
+  .contact-info {
+    width: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-email {
+    margin: 2rem;
+  }
+
+  .contact-location {
+    margin: 2rem;
+  }
+
+  .site-about {
+    width: 100%;
+    display: block;
+  }
+}
+
+
+@media only screen and (max-width: 670px) {
+  .bio-content h2 {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+}
+
 
 @media only screen and (max-width: 520px) {
   nav.menu-desktop {
@@ -452,10 +517,9 @@ footer .links a:nth-child(2n) {
   .portfolio-entry img {
     max-width: 100%;
     height: auto;
-
   }
-
 }
+
 
 @media only screen and (min-width: 520px) and (max-width: 690px) {
   .hello-block h1 {
