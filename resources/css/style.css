@@ -45,6 +45,7 @@ a {
 
 section {
   display: block;
+  margin: 10rem 10rem 20rem 10rem;
 }
 
 /* Header */
@@ -98,11 +99,10 @@ nav.menu-mobile {
 
 /* HELLO STYLES HERE */
 
-
-.intro {
+section.intro {
   display: flex;
   justify-content: center;
-  margin: 10rem 0;
+  margin: 15rem 0 15rem 0;
 }
 
 .hello-block {
@@ -193,7 +193,7 @@ h2.image-hover {
 
 section.about-module {
   display: block;
-  margin: 10rem;
+  margin: 10rem 5rem;
 }
 
 .profile {
@@ -201,7 +201,6 @@ section.about-module {
   display: flex;
   position: relative;
   align-items: center;
-  margin: 0 auto;
 }
 
 .headshot {
@@ -238,26 +237,24 @@ section.about-module {
 /* CONTACT STYLES HERE */
 
 section.contact {
-  display: block;
-  margin: 10rem 10rem 20rem 10rem;
+  margin: 5rem;
 }
 
 .contact-info {
-  width: 60%;
+  max-width: 60%;
   display: flex;
-  position: relative;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   margin: 0 auto;
 }
 
 .contact-email {
   display: inline;
+  padding: 0 2rem;
 }
 
 .contact-location {
   display: inline;
+  padding: 0 2rem;
 }
 
 .site-about {
@@ -274,10 +271,6 @@ section.contact {
 
 /* RESUME STYLES HERE */
 
-section.resume {
-  display: block;
-  margin: 10rem 10rem 20rem 10rem;
-}
 
 .resume-text {
   max-width: 70%;
@@ -301,14 +294,9 @@ section.resume {
 
 /* CLIENT WORK STYLES HERE */
 
-section.client-work {
-  display: block;
-  margin: 10rem 10rem 20rem 10rem;
-}
-
 .client-description {
   display: block;
-  width: 50%;
+  width: 60%;
   margin: 0 auto;
 }
 
@@ -322,14 +310,6 @@ section.client-work {
 
 .client-description h2 {
   margin-bottom: 1rem;
-}
-
-.client-portfolio-entry-twocol {
-  display: inline-flex;
-  width: 80%;
-  margin: 5rem 0;
-  justify-content: center;
-  align-items: center;
 }
 
 .client-portfolio-entry-onecol {
@@ -354,11 +334,6 @@ img.client-entry {
   margin: 3rem 0;
   border: 1px solid lightgrey;
 
-}
-
-.client-portfolio-entry-split-text {
-  display: inline-block;
-  width: 40%;
 }
 
 .client-portfolio-entry-head-text {
@@ -405,8 +380,13 @@ footer .links a:nth-child(2n) {
   padding-left: .5rem;
 }
 
-/* Footer Mobile */
+/* Sections & Footer Mobile */
+
 @media only screen and (max-width: 768px) {
+  section {
+    margin: 10rem 5rem;
+  }
+
   footer .legal {
     display: inline;
     justify-content: flex-start;
@@ -446,7 +426,7 @@ footer .links a:nth-child(2n) {
   }
 
   .bio {
-    width: 80%;
+    width: 100%;
     height: auto;
     position: relative;
     right: 0;
@@ -469,8 +449,20 @@ footer .links a:nth-child(2n) {
   }
 
   .site-about {
-    width: 100%;
+    max-width: 80%;
     display: block;
+  }
+
+  .client-description {
+    width: 100%;
+  }
+
+  .client-portfolio-entry-onecol {
+    width: 100%;
+  }
+
+  .client-portfolio-entry-head-text {
+    width: 100%;
   }
 }
 
@@ -479,6 +471,10 @@ footer .links a:nth-child(2n) {
   .bio-content h2 {
     font-size: 1.5rem;
     line-height: 1.5rem;
+  }
+
+  .site-about {
+    width: 100%;
   }
 }
 
