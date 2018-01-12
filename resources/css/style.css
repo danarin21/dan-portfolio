@@ -1,3 +1,14 @@
+@font-face {
+    font-family: 'Libre Franklin';
+    src: url('../fonts/LibreFranklin-BlackItalic.eot');
+    src: url('../fonts/LibreFranklin-BlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/LibreFranklin-BlackItalic.woff2') format('woff2'),
+        url('../fonts/LibreFranklin-BlackItalic.woff') format('woff'),
+        url('../fonts/LibreFranklin-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
 html,
 body {
   font-size: 16px; /* 1 rem */
@@ -134,7 +145,7 @@ section.portfolio {
 }
 
 .portfolio-container { /* Site Content Width if needed */
-  max-width: 80%;
+  max-width: 100%;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -261,6 +272,7 @@ section.contact {
   max-width: 60%;
   display: block;
   margin: 0 auto;
+  padding: 5rem 0;
 }
 
 .site-about p {
@@ -380,11 +392,19 @@ footer .links a:nth-child(2n) {
   padding-left: .5rem;
 }
 
-/* Sections & Footer Mobile */
+/* MOBILE QUERIES HERE */
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   section {
-    margin: 10rem 5rem;
+    margin: 10rem 0rem;
+  }
+
+  section.about-module {
+    margin: 10rem 2rem 5rem 2rem;
+  }
+
+  section.contact {
+    margin: 5rem 2rem;
   }
 
   footer .legal {
@@ -393,36 +413,31 @@ footer .links a:nth-child(2n) {
   }
 
   footer .links {
-    margin: 1rem 5rem;
+    margin: 1rem 3rem;
   }
 
   footer p {
-    margin: 1rem 5rem;
+    margin: 1rem 3rem;
   }
 
-}
-
-
-
-/* MOBILE QUERIES HERE */
-
-@media only screen and (max-width: 1100px) {
-  section.contact {
-    display: block;
-    margin: 10rem;
+  .resume-text {
+    width: 100%;
   }
 
   .profile {
     width: 100%;
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
+    display: block;
   }
 
   .headshot {
-    width: 80%;
-    height: auto;
-    z-index: 5;
+    width: 100%;
+    height: 100%;
+  }
+
+  .headshot img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .bio {
@@ -430,27 +445,36 @@ footer .links a:nth-child(2n) {
     height: auto;
     position: relative;
     right: 0;
-    margin-top: 2rem;
+  }
+
+  .bio-content {
+    padding: 0;
+    background-color: transparent;
+    margin: 5rem 1rem;
   }
 
   .contact-info {
     width: 100%;
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
+    display: block;
+    margin: 0rem 1rem;
   }
 
+  .site-about {
+    max-width: 100%;
+    display: block;
+    margin: 5rem 1rem;
+    padding: 0;
+  }
+}
+
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
   .contact-email {
     margin: 2rem;
   }
 
   .contact-location {
     margin: 2rem;
-  }
-
-  .site-about {
-    max-width: 80%;
-    display: block;
   }
 
   .client-description {
@@ -465,19 +489,6 @@ footer .links a:nth-child(2n) {
     width: 100%;
   }
 }
-
-
-@media only screen and (max-width: 670px) {
-  .bio-content h2 {
-    font-size: 1.5rem;
-    line-height: 1.5rem;
-  }
-
-  .site-about {
-    width: 100%;
-  }
-}
-
 
 @media only screen and (max-width: 520px) {
   nav.menu-desktop {
@@ -513,6 +524,43 @@ footer .links a:nth-child(2n) {
   .portfolio-entry img {
     max-width: 100%;
     height: auto;
+  }
+
+  section.about-module {
+    margin: 10rem 1rem 5rem 1rem;
+  }
+
+  .bio-content {
+    margin: 5rem 0;
+  }
+
+  section.contact {
+    margin: 5rem 1rem;
+  }
+
+  .contact-info {
+    margin: 0;
+  }
+
+  .site-about {
+    margin: 0;
+  }
+
+  section.resume {
+    margin: 10rem 1rem;
+  }
+
+  .resume-text {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  footer .links {
+    margin: 1rem;
+  }
+
+  footer p {
+    margin: 1rem;
   }
 }
 
