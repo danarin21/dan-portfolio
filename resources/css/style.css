@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'Libre Franklin';
-    src: url('./fonts/LibreFranklin-BlackItalic.eot');
-    src: url('./fonts/LibreFranklin-BlackItalic.eot?#iefix') format('embedded-opentype'),
-        url('./fonts/LibreFranklin-BlackItalic.woff2') format('woff2'),
-        url('./fonts/LibreFranklin-BlackItalic.woff') format('woff'),
-        url('./fonts/LibreFranklin-BlackItalic.ttf') format('truetype');
+    src: url('/resources/fonts/LibreFranklin-BlackItalic.eot');
+    src: url('/resources/fonts/LibreFranklin-BlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('/resources/fonts/LibreFranklin-BlackItalic.woff2') format('woff2'),
+        url('/resources/fonts/LibreFranklin-BlackItalic.woff') format('woff'),
+        url('/resources/fonts/LibreFranklin-BlackItalic.ttf') format('truetype');
     font-weight: 900;
     font-style: italic;
 }
@@ -553,6 +553,10 @@ footer .links a:nth-child(2n) {
   .resume-text {
     max-width: 100%;
     margin: 0;
+  }
+
+  .resume-entry h3 {
+    line-height: 1.75rem;
   }
 
   footer .links {
