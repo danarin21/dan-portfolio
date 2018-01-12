@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'Libre Franklin';
-    src: url('../fonts/LibreFranklin-BlackItalic.eot');
-    src: url('../fonts/LibreFranklin-BlackItalic.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/LibreFranklin-BlackItalic.woff2') format('woff2'),
-        url('../fonts/LibreFranklin-BlackItalic.woff') format('woff'),
-        url('../fonts/LibreFranklin-BlackItalic.ttf') format('truetype');
+    src: url('./fonts/LibreFranklin-BlackItalic.eot');
+    src: url('./fonts/LibreFranklin-BlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/LibreFranklin-BlackItalic.woff2') format('woff2'),
+        url('./fonts/LibreFranklin-BlackItalic.woff') format('woff'),
+        url('./fonts/LibreFranklin-BlackItalic.ttf') format('truetype');
     font-weight: 900;
     font-style: italic;
 }
