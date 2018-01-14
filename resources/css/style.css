@@ -353,6 +353,10 @@ section.contact {
   padding: 0 2rem;
 }
 
+.contact-email p {
+  text-decoration: underline;
+}
+
 .contact-location {
   display: inline;
   padding: 0 2rem;
