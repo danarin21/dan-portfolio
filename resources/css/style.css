@@ -695,6 +695,7 @@ footer .links a:nth-child(2n) {
 
   .resume-entry h3 {
     line-height: 1.75rem;
+    margin-bottom: .5rem;
   }
 
   section.client-work {
