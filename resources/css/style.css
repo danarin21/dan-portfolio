@@ -73,7 +73,7 @@ header {
 p.caption {
   margin-top: 1rem;
   font-style: italic;
-  font-size: .75rem;
+  font-size: .875rem;
 }
 
 /* Desktop and Tablet */
@@ -158,16 +158,138 @@ section.portfolio {
 .portfolio-entry {
   display: flex;
   position: relative;
+  padding: .75rem;
+  max-width: 100%;
+  list-style: none;
+  text-align: center;
+}
+
+.portfolio-entry figure {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 1rem;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
 }
 
 img.desktop-thumbnail {
+  position: relative;
+  display: block;
   max-width: 100%;
   height: auto;
-  padding: .75rem 1rem;
-  position: relative;
 }
 
-/* Hover 1 */
+.portfolio-entry figure figcaption {
+  padding: 1rem;
+  color: #000;
+  -webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.portfolio-entry figure figcaption::before,
+.portfolio-entry figure figcaption::after {
+  pointer-events: none;
+}
+
+.portfolio-entry figure figcaption,
+.portfolio-entry figure figcaption > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.portfolio-entry figure figcaption > a {
+	z-index: 1000;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+}
+
+.portfolio-entry figure h2 {
+  color: #fff;
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 900;
+  font-size: 2rem;
+  font-style: italic;
+}
+
+.grid figure h2,
+.grid figure p {
+	margin: 0;
+}
+
+/* Individual effects */
+
+figure.effect {
+	background: #000;
+}
+
+figure.effect img {
+	max-width: 100%;
+}
+
+figure.effect:hover img {
+	opacity: 0.7;
+}
+
+figure.effect figcaption {
+	text-align: left;
+}
+
+figure.effect figcaption > div {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 1rem;
+	width: 100%;
+	height: 25%;
+}
+
+figure.effect h2,
+figure.effect p {
+	-webkit-transform: translate3d(0,40px,0);
+	transform: translate3d(0,40px,0);
+}
+
+figure.effect h2 {
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+}
+
+figure.effect p {
+	color: rgba(255,255,255,0.8);
+	opacity: 0;
+	-webkit-transition: opacity 0.2s, -webkit-transform 0.35s;
+	transition: opacity 0.2s, transform 0.35s;
+}
+
+
+figure.effect:hover p {
+	opacity: 1;
+}
+
+figure.effect:hover img,
+figure.effect:hover h2,
+figure.effect:hover p {
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+figure.effect:hover p {
+	-webkit-transition-delay: 0.05s;
+	transition-delay: 0.05s;
+	-webkit-transition-duration: 0.35s;
+	transition-duration: 0.35s;
+}
+
+/* Hover 1
 .overlay {
   position: absolute;
   top: 0;
@@ -201,7 +323,7 @@ h2.image-hover {
   -ms-transform: translate(-50%, -50%);
 }
 
-
+*/
 
 /* ABOUT STYLES HERE */
 
@@ -530,6 +652,18 @@ footer .links a:nth-child(2n) {
     height: auto;
   }
 
+  .portfolio-entry figure {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    margin: 0;
+    width: 100%;
+  }
+
+  figure.effect figcaption div {
+    display: none;
+  }
+
   section.about-module {
     margin: 10rem 1rem 5rem 1rem;
   }
@@ -561,6 +695,25 @@ footer .links a:nth-child(2n) {
 
   .resume-entry h3 {
     line-height: 1.75rem;
+  }
+
+  section.client-work {
+    margin: 10rem 1rem;
+  }
+
+  .client-description {
+    margin: 0;
+    width: 100%;
+  }
+
+  .client-portfolio-entry-onecol {
+    margin: 0;
+    width: 100%;
+  }
+
+  .client-portfolio-entry-head-text {
+    margin: 0;
+    width: 100%;
   }
 
   footer .links {
